@@ -1,0 +1,294 @@
+body {
+    background-color:#e1e6ef; /* sets a background color for the body*/
+}
+h1 {
+	color: Black;
+    text-align: center;
+	position: relative;
+	position: sticky;    /* sets characteristics for heading 1. */
+	top: 1px;
+	column-span: all;
+}
+
+
+#oneColumn {
+    column-count: 1;
+    column-gap: 40px;
+	column-rule-style: solid;
+	column-rule-width: 1px;
+	column-rule-color: lightblue;      /*creates 1 columns with a 40px gap in between and padding of 5px for the about me page*/
+	column-width: 100px;
+	font-family: Raleway, sans-serif;
+	font-size: 20px;
+	padding: 5px;
+	line-height: 1.6;
+	text-align: justify;
+}
+
+#threeColumn {
+    column-count: 3;
+    column-gap: 40px;
+	column-rule-style: solid;
+	column-rule-width: 1px;
+	column-rule-color: lightblue;      /*creates 3 columns with a 40px gap in between and padding of 5px for the project page*/
+	column-width: 100px;
+	font-family: Raleway, sans-serif;
+	font-size: 20px;
+	padding: 5px;
+	line-height: 1.6;
+	text-align: justify;
+}
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+input[type=text]:focus {
+    border: 3px solid white;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+#embededVideo {
+	padding: 300px;
+	text-align: left;     /*Style for the embeded video on the project page*/
+    margin: auto;
+}
+	
+
+	/*Code for the form on cotnact me page that sets the colours of text, the background and other small details*/
+table#t01{
+	width: 30%;
+	text-align: left;
+}
+table#t01 tr:nth-child(even){
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd){
+    background-color: #fff;
+}
+table#t01 th{
+    color: white;
+    background-color: gray;
+}
+
+
+/*Code for the nav bar*/
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;    /*Sets styles for the buttons on the nav bar*/
+  line-height: 1;
+  display: block;
+  position: sticky;
+  top: 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  width: auto;
+  font-family: Raleway, sans-serif;         /*Sets the font and other features for the nav bar*/
+  line-height: 1;
+}
+#cssmenu > ul {
+  background: #3db2e1;
+  position: sticky;
+  top: 1px;
+  left: 0px;
+  height: 50px;                        /*More style for the nav bar*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#cssmenu > ul > li {
+  float: left;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+#cssmenu.align-center > ul {
+  font-size: 0;                  /*alligns all text to the center*/
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu > ul > li > a {
+  padding: 14px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;         /*Styling for the nav bar*/
+  text-decoration: none;
+  background: #3db2e1;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#cssmenu > ul > li.active > a {
+  color: #dff2fa;
+}
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li > a:hover {
+  color: #dff2fa;
+  -webkit-transform: rotateX(90deg) translateY(-23px);     /*Makes the nav bar sections rotate when mouse is hovering over them*/
+  -moz-transform: rotateX(90deg) translateY(-23px);
+  transform: rotateX(90deg) translateY(-23px);
+  -ms-transform: none;
+}
+#cssmenu > ul > li > a::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;                       /*sets styles for the nav bar sections and the navbar itself*/
+  width: 100%;
+  height: 100%;
+  padding: 16px 20px;
+  color: #dff2fa;
+  background: #19799f;
+  content: attr(data-title);
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -ms-transform: translateY(- -18px);
+}
+#cssmenu > ul > li:hover > a::before,
+#cssmenu > ul > li > a:hover::before {         /*Sets the color for when the nav bar tabs rotate*/
+  background: #3db2e1;
+}
+
+* {box-sizing:border-box}
+
+/* Slider container */
+.slideshow-container {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+
+}
+
+/*Hide the images*/
+.slider {
+    display: none;
+}
+
+/*Next/previous buttons*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/*places the right facing arrow on the right side*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/*On mouse over, add a black background with transparency*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Caption text */
+.text {
+  color: #ffffff;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+}
+
+/*Number on picture*/
+.numbertext {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-family: Raleway, sans-serif;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/*Fading*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
